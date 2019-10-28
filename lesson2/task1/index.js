@@ -1,6 +1,6 @@
 const userName = 'John';
-const g1reeting = "I'm John";
-const _profession = 'Developer';
+const greeting = "I'm John";
+const profession = 'Developer';
 const $hobby = 'Walking';
 const favouriteDessert = 'cake';
 let pet_ = 'dog';
