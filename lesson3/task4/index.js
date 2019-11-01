@@ -18,6 +18,7 @@ console.log("undefined || null || 0 || '' || null: ", undefined || null || 0 || 
 
 const customAmount = null;
 const defaultAmount = 17;
+const amount = customAmount || defaultAmount;
 console.log('amount = customAmount || defaultAmount: ', amount = customAmount || defaultAmount);
 
 // && находит первое ложное значение
