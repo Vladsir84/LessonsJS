@@ -22,7 +22,6 @@ const amount = customAmount || defaultAmount;
 
 // && находит первое ложное значение
 console.log("'text' && false: ", 'text' && false);
-console.log("'text' && false: ", 'text' && false);
 console.log("true && 'text': ", true && 'text');
 console.log("undefined && null && 0 && '' && null: ", undefined && null && 0 && '' && null);
 
