@@ -16,7 +16,9 @@ if (null) {
 }
 
 
-const age = 17;
+let age = 18;
+
+
 if (age < 16) {
     console.log('Too young');
 } else if (age >= 16 && age < 18) {
@@ -29,5 +31,6 @@ if (age < 16) {
 
 // Оператор ? : ( const result = условие ? значение)
 
+let amount = 1;
 
 const result = amount > 17 ? 'full' : 'empty';
