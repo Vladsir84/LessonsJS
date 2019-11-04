@@ -23,5 +23,5 @@
  console.log("NaN to boolean is " + Boolean(NaN));
  console.log("'' to boolean is " + Boolean(''));
  console.log("' ' to boolean is " + Boolean(' '));
- console.log(" 17 to boolean is " + Boolean(17));
+ console.log("17 to boolean is " + Boolean(17));
  console.log("\'Hello\' to boolean is " + Boolean('Hello'));
