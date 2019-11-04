@@ -1,9 +1,9 @@
-let n = 1;
+// let n = 1;
 
-while (n <= 10) {
-    console.log(n);
-    n++;
-}
+// while (n <= 10) {
+//     console.log(n);
+//     n++;
+// }
 
 let n = 100;
 let sum = 0;
