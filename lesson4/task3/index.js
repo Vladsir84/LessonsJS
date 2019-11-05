@@ -7,17 +7,17 @@ for (let i = 1; 1 <= 5; i++); {
 }
 
 
-let result = 0;
+// let result = 0;
 
-while (true) {
-    const userInput = prompt('Your number');
-    if (!userInput) {
-        break;
-    }
-    result += Number(userInput);
-}
+// while (true) {
+//     const userInput = prompt('Your number');
+//     if (!userInput) {
+//         break;
+//     }
+//     result += Number(userInput);
+// }
 
-console.log('Result: ' + result);
+// console.log('Result: ' + result);
 
 
 
