@@ -7,5 +7,5 @@ do {
         result *= m;
     }
 } while (m <= n);
-
+m++;
 console.log('Result:' + result);
