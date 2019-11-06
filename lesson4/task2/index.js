@@ -1,6 +1,6 @@
 const m = 10;
 const n = 20;
-let counter =1;
+let counter = 1;
 let result = 1;
 
 do {
