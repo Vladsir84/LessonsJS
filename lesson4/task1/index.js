@@ -1,7 +1,7 @@
  const n = 100;
  let sum = 0;
  
- i = n
+ let i = n;
  
  while (i > 0) {
      sum += i;
