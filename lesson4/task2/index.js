@@ -1,4 +1,4 @@
-let m = 10;
+const m = 10;
 const n = 20;
 let result = 1;
 
