@@ -1,5 +1,5 @@
 const n = '7';
-let sum = 0;
+let sum = ' ';
 
 let i = n;
 
