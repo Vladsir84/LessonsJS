@@ -1,9 +1,11 @@
  let n = 100;
  let sum = 0;
-
- while (n > 0) {
-     sum += n;
-     
+ 
+ i = n
+ 
+ while (i > 0) {
+     sum += i;
+     i -= 1;
  }
 
- console.log(sum);
+ console.log('Result: ' + sum);
