@@ -1,4 +1,4 @@
- const n = 100;
+ const n = 10;
  let sum = 0;
  
  let i = n;
