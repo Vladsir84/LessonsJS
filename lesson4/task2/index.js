@@ -9,6 +9,6 @@ do {
         result *= i;
    }
    i++;
-} while (i <= n);   
+} while (i < n);   
 
-console.log('Result:' + result);
+console.log('Result: ' + result);
