@@ -1,12 +1,14 @@
-const m = 10;
-const n = 20;
-let counter;
+const m = 55;
+const n = 77;
 let result = 1;
 
+let i = m;
+
 do {
-    if (m % 2 === 1) {
-        result *= m;
+    if (i % 2 === 1) {
+        result *= i;
    }
- ++counter;
-} while (m <= n);   
+   i++;
+} while (i <= n);   
+
 console.log('Result:' + result);
