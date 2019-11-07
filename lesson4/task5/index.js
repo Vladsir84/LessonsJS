@@ -20,3 +20,5 @@ for (let i = 0; i <= j; i++) {
         continue;
     }
 }
+
+console.log(result);
