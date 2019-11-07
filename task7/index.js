@@ -1,9 +1,11 @@
-let n = 10000000;
+const n = 10000000;
 let sum = 0;
 
-while (n > 0) {
-    sum += n;
-    n -= 1;
+let i = n;
+
+while (i > 0) {
+    sum += i;
+    i -= 1;
 }
 
 console.log('Result:' + sum);
