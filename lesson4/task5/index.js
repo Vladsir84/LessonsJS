@@ -20,4 +20,4 @@ for (let i = m; i <= j; i++) {
     }
 }
 
-console.log('Result :' + result);
+
