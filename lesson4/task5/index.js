@@ -5,16 +5,16 @@ let i = m;
 let j = n;
 
 for (let i = 0; i <= j; i++) {
-    if (i % 2 === 4) {
+    if (i % 2 === 0 && i % 4 === 1) {
         result + i;
     }
-    if (i % 3) {
+    if (i % 3 === 0) {
         result - i;
     }
-    if (i % 4) {
+    if (i % 4 === 0) {
         result * i;
     }
-    if (i % 5) {
+    if (i % 5 === 0) {
         console.log(result)
     } else {
         continue;
