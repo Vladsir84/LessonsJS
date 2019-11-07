@@ -1,10 +1,9 @@
 const m = 30;
 const n = 40;
 let result = 0;
-let i = m;
 let j = n;
 
-for (let i = 0; i <= j; i++) {
+for (let i = m; i <= j; i++) {
     if (i % 2 === 0 && i % 4 !== 0) {
         result += i;
     }
