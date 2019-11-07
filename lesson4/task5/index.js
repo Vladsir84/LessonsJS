@@ -15,7 +15,7 @@ for (let i = 0; i <= j; i++) {
         result *= i;
     }
     if (i % 5 === 0) {
-        console.log(result);
+        console.log('Result: ' + result);
     } else {
         continue;
     }
