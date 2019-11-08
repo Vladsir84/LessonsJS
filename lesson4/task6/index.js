@@ -8,7 +8,7 @@ for (let i = 0; i <= 1000; i++) {
 
     if ((sum += i) * 5 > 5000) {
         console.log('Bigger');
-    } else {
+    } else if ((sum += i) * 5 <= 5000) {
         console.log('Smaller or equal');
     }
 
