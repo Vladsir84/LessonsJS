@@ -1,9 +1,3 @@
-// arrow function
-
-// function getSquare(num) {
-//     return num * num;
-// }
-
 const getSquare = (num) => {
     return num * num;
 }
