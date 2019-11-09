@@ -14,7 +14,7 @@ for (let j = 1; j <= 1000; j++) {
     sum += j;
 }
 
-for (let k = 1; k <= j; k++) {
+k === j; {
 
     console.log(true);
     console.log(false);
