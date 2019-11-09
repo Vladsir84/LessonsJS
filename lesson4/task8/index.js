@@ -12,6 +12,9 @@ for (let k = 1; k <= 1000; k++) {
 let j = sum % 1234;
 for (let j = 1; j <= 1000; j++) {
     sum += j;
+}
+
+for (let k = 1; k <= j; k++) {
 
     console.log(true);
     console.log(false);
