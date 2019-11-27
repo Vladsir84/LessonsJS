@@ -11,7 +11,7 @@ if (!Array.isArray(arr)) {
         return null;
     }
 
-const numbers = [11, 22, 33, 55, 66];
+const array = [11, 22, 33, 55, 66];
 const sumOfArray = getSum(arr);
 
 
