@@ -1,17 +1,15 @@
 function getSum(arr) {
     let sumOfArray = 0;
-
+    if (!Array.isArray(arr)) {
+        return null;
+    }
     for (let num of arr) {
         sumOfArray += num;
     }
 
     return sumOfArray;
 }
-if (!Array.isArray(arr)) {
-        return null;
-    }
 
-const array = [11, 22, 33, 55, 66];
-const sumOfArray = getSum(arr);
+
 
 
