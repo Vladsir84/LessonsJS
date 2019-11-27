@@ -1,7 +1,9 @@
 function uniqueCount(arr) {
-    let n = arr.length;
-    for (i = 0; i < n - 1; i++) {
-        for (let j = i + 1; j < n; j++) { if (arr[i] === arr[j]) return false; }
+    let num = 0;
+    for (i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < n; j++) {
+            if (arr[i] !== arr[j]) num++;
+        }
+        return num;
     }
-    return true;
 }
