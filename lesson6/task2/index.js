@@ -1,55 +1,17 @@
-// let sumOfNumbers = 0;
-// for (let i = 0; i < numbers.length; i++) {
-//     console.log(numbers[i]);
-//     sumOfNumbers += numbers[i];
-// }
+function getSum(arr) {
+    let sumOfArray = 0;
 
-// console.log('Result: ' + sumOfNumbers);
-
-
-
-// function sum(numbers) {
-//     let sumOfNumbers = 0;
-
-//     for (let i = 0; i < numbers.length; i++) {
-
-//         sumOfNumbers += numbers[i];
-//     }
-
-//     return sumOfNumbers;
-// }
-
-// const sumOfElements = sum(numbers);
-
-
-// console.log('Result: ' + sumOfElements);
-
-
-
-
-// const numbers = [11, 22, 33, 55, 66];
-
-// const arr = numbers;
-
-// arr[2] = 1000;
-
-// console.log(numbers);
-
-
-
-
-function sum(numbers) {
-    let sumOfNumbers = 0;
-
-    for (let num of numbers) {
-        sumOfNumbers += num;
+    for (let num of arr) {
+        sumOfArray += num;
     }
 
-    return sumOfNumbers;
+    return sumOfArray;
 }
+if (!Array.isArray(arr)) {
+        return null;
+    }
 
 const numbers = [11, 22, 33, 55, 66];
-const sumOfElements = sum(numbers);
+const sumOfArray = getSum(arr);
 
 
-console.log('Result: ' + sumOfElements);
