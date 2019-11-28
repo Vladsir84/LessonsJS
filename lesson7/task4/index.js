@@ -5,7 +5,7 @@ const getMessagesForBestStudents = (allStudents, failedStudents) =>
 
     allStudents
     .filter(name => !failedStudents.includes(name))
-    .map(name => 'Good job,' + name);
+    .map(name => 'Good job,'+ name);
 
 
 const allStudents = ['Ann', 'Tom', 'Bob'];
