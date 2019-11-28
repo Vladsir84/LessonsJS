@@ -33,10 +33,10 @@ const transformToObject = arr => {
 
 // [1, 'text'] => {'1': 1, text: 'text'}
 
-const arr = [1, 'text'];
-const result = transformToObject(arr);
+// const arr = [1, 'text'];
+// const result = transformToObject(arr);
 
-console.log(result);
+// console.log(result);
 
 // const user = {
 //     name: 'Tom'
