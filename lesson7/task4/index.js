@@ -8,7 +8,7 @@ const getMessagesForBestStudents = (allStudents, failedStudents) =>
     .map(name => 'Good job,' + name);
 
 
-const allStudents = ['Ann', 'Tom', 'Bob', 'Kate'];
+const allStudents = ['Ann', 'Tom', 'Bob'];
 const failedStudents = ['Tom', 'Bob'];
 
 // console.log(getMessagesForPassedStudents(allStudents, failedStudents));
