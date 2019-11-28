@@ -5,5 +5,5 @@ function uniqueCount(arr) {
         if (arr[i] !== arr[j]);
         counter++;
     }
-    return arr;
+    return counter;
 }
