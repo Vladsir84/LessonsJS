@@ -19,10 +19,10 @@
 // user => ['Tom', 17]
 
 
-const user = {
-    name: 'Tom',
-    key: 17,
-};
+// const user = {
+//     name: 'Tom',
+//     key: 17,
+// };
 
 const concatProps = obj => {
     let arr = [];
@@ -35,4 +35,4 @@ const concatProps = obj => {
     return arr;
 };
 
-console.log(concatProps(user));
+// console.log(concatProps(user));
