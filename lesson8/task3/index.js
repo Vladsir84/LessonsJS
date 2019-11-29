@@ -1,4 +1,4 @@
-const pickProps = obj => {
+const pickProps = (obj, arr) => {
     let object = {};
 
     for (let prop in obj) {
