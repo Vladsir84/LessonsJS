@@ -4,10 +4,10 @@ for (let i = 1; i <= 1000; i++) {
     sum += i;
 }
 
-if (sum/1234 > sum % 1234){
-   console.log(true); 
+let k = sum / 1234;
+for (let k = 1; k <= 1000; k++) {
+    sum += k;
 }
-else{
-      console.log(false);
-}
+
+[k % 2 === 0 > k % 2 === 1] ? [console.log(true)] : [console.log(false)]
 
