@@ -1,36 +1,38 @@
 // оператор || (OR)
-false || true
-false || true || false
-false || false || false
+console.log("false || true: ", false || true);
+console.log("false || true || false: ", false || true || false);
+console.log("false || false || false: ", false || false || false);
 
 // оператор && (AND)
-true && true
-false && true && false
-true && true && true
+console.log("false && true: ", false && true);
+console.log("false && true && false: ", false && true && false);
+console.log("true && true && true: ", true && true && true);
 
 // Логические операторы могут применяться к любым типам данных
 
 // || находит первое истинное значение
 
-    'text' || false;
-true || 'text';
-undefined || null || 0 || '' || null;
+console.log("'text' || false: ", 'text' || false);
+console.log("true || 'text': ", true || 'text');
+console.log("undefined || null || 0 || '' || null: ", undefined || null || 0 || '' || null);
 
 const customAmount = null;
 const defaultAmount = 17;
-const amount = customAmount || defaultAmount;
+const amount = customAmount || defaultAmount; // выводим значкние переменной amount в формате console.log('amount: ', amount);
+
+console.log("amount: ", amount);
 
 // && находит первое ложное значение
+console.log("'text' && false: ", 'text' && false);
+console.log("true && 'text': ", true && 'text');
+console.log("undefined && null && 0 && '' && null: ", undefined && null && 0 && '' && null);
 
-'text' && false;
-true && 'text';
-undefined && null && 0 && '' && null;
 
 /* == */
 
-!true;
-!false;
-!'text';
-!!'text';
+console.log("!true: ", !true);
+console.log("!false: ", !false);
+console.log("!'text': ", !'text');
+console.log("!!'text': ", !!'text');
 
 // !-> && -> ||
