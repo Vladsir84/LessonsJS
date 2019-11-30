@@ -5,9 +5,6 @@ for (let i = 1; i <= 1000; i++) {
 }
 
 let k = sum / 1234;
-for (let k = 1; k <= 1000; k++) {
-    sum += k;
-}
+let l = sum % 1234;
 
-[k % 2 === 0 > k % 2 === 1] ? [console.log(true)] : [console.log(false)]
-
+[k > l] ? [true] : [false];
