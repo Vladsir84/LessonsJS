@@ -7,4 +7,4 @@ for (let i = 1; i <= 1000; i++) {
 let k = sum / 1234;
 let l = sum % 1234;
 
-[k > l] ? [console.log(true)] : [console.log(false)];
+k > l ? console.log(true) : console.log(false);
