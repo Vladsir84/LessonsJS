@@ -42,4 +42,4 @@ const player = {
     ...restProps
 }
 
-console.log(player);
+// console.log(player);
