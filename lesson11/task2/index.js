@@ -3,5 +3,5 @@ const sortContacts = (contacts, isAsc = true) => {
     return contacts
         .sort((a, b) => isAsc === true ? 
         a.name.localeCompare(b.name) :
-        a.name.localeCompare(b.name));    
+        b.name.localeCompare(a.name));    
     };
