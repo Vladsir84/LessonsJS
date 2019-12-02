@@ -1,4 +1,4 @@
-const splitText = (text, len) => {
+const splitText = (text, len = 1) => {
     if (typeof text !== 'string') return null
     const strArr = [];
     let startPosition = 0;
