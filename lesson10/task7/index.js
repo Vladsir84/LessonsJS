@@ -1,5 +1,5 @@
 const superRound = (num, elem) => {
-    let elem = 10;
+    let elem = 1;
     for (let i = 0; i < elem; i++) {
         elem += '0';
     }
