@@ -1,7 +1,3 @@
-// calc
-
-// '1 + 2' => '1 + 2 = 3'
-
 const calc = expression => {
     const [a, operator, b] = expression.split(' ');
     let result;
@@ -25,4 +21,3 @@ const calc = expression => {
     return `${expression} = ${result}`;
 };
 
-// console.log(calc('6 - 9'));
