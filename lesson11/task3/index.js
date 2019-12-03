@@ -14,4 +14,3 @@ function splitString(str, len = 10) {
     }
 }
 
-console.log(splitString('abcd efgh  ', 10));
