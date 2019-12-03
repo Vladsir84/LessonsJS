@@ -3,14 +3,14 @@ function splitString(str, len = 10) {
     let arrString = [];
     let startPoint = 0;
     while (true) {
-        let el = string.substr(startPoint, len);
+        let el = str.substr(startPoint, len);
         if (el.length === 0) break;
-        arrStr.push(el);
+        arrString.push(el);
         startPoint += len;
     }
-    if (elem.length < len) {
-        while (elem.length < len) {
-            elem += ".";
+    if (el.length < len) {
+        while (el.length < len) {
+            el += ".";
         }
         return arrString;
     }
