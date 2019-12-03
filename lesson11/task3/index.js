@@ -7,10 +7,8 @@ function splitString(str, len = 10) {
         if (el.length === 0) break;
         arrString.push(el);
         startPoint += len;
-    }
-    if (el.length < len) {
-        while (el.length < len) {
-            el += ".";
+        while (arrString[arrString.length - 1].length < len) {
+            arrString[arrString.length - 1] += '.';
         }
         return arrString;
     }
