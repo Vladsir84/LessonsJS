@@ -1,6 +1,6 @@
 import getSum, { getSquaredNumbers, getOddNumbers } from './calculator.js';
 
-it('should get squareNumbers', () => {
+it('should get squaredNumbers', () => {
     const result = getSquaredNumbers([1, 2, 3]);
 
     expect(result).toEqual([1, 4, 9]);
