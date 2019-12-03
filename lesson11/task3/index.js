@@ -13,3 +13,5 @@ function splitString(str, len = 10) {
         return arrString;
     }
 }
+
+console.log(splitString('abcd efgh  ', 10));
