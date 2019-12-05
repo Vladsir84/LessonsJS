@@ -9,12 +9,11 @@ export default () => {
     }
 
     function setMessage(text) {
-        message = text; // .bold();
+        message = text; 
     }
 
     function setSender(newSender) {
-        sender = newSender; //.bold();
-    }
+        sender = newSender; 
 
     return {
         sendMessage,
