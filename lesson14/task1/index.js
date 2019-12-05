@@ -15,10 +15,6 @@ function setMessage(text) {
 
 sendMessage('Ann');
 
-// setMessage('Hello!');
+setMessage('Good job!');
 
-// sendMessage('Tom');
-
-// message = 'Hi!';
-
-// sendMessage('Tom');
+sendMessage('Ann');
