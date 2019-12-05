@@ -5,11 +5,11 @@ export function add(num) {
 }
 
 export function decrease(num) {
-    return number -= num;
+    return result -= num;
 }
 
 export function reset() {
-    return number = 0;
+    return result = 0;
 }
 
 export function getMemo() {
