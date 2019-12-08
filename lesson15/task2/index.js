@@ -1,6 +1,4 @@
-'use strict';
-
-export const createCalculator = () => {
+export function createCalculator() {
     let number = 0;
 
     function add(num) {
