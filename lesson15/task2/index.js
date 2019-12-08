@@ -1,36 +1,28 @@
-// const message = 'Have a good day!';
+'use strict';
 
-// function sendMessage(name) {
+export const createCalculator = () => {
+    let number = 0;
 
-//     let greeting = 'Hi, ';
-
-//     if (name) {
-
-//         console.log(greeting + name);
-//     } else {
-//         console.log(message);
-//     }
-
-// }
-
-// sendMessage('Ann');
-
-
-const message = 'Have a good day!';
-
-function sendMessage(name) {
-
-    let greeting = 'Hi, ';
-
-    if (name) {
-        const greeting = 'Hello, '
-        const name = 'Tad';
-        console.log(greeting + name);
-    } else {
-
-        console.log(message + ' is a message');
+    function add(num) {
+        number += num;
     }
 
-}
+    function decrease(num) {
+        number -= num;
+    }
 
-sendMessage('Ann');
+    function reset() {
+        number = 0;
+    }
+
+    function getMemo() {
+        return number;
+    }
+
+    return {
+        add,
+        decrease,
+        reset,
+        getMemo,
+    }
+};
