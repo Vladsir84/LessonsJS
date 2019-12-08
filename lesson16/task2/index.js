@@ -6,4 +6,4 @@ for (let i = 0; i < 10; i++) {
     }
 }
 
-console.log(arr[0]());
+export { arr };
