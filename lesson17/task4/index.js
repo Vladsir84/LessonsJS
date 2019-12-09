@@ -7,13 +7,7 @@
 
             setFullName(fullName) {
                 let elem = fullName.split(' ');
-                elem = [this.firstName, this.lastName];
+                [this.firstName, this.lastName] = elem;
             }
         }
-        // console.log(user.getFullName());
-
-    // user.setFullName("Tom Black");
-    // console.log(user.getFullName());
-    // user.getFullName();
-
-    // const func = user.getFullName.bind(user);
+       
