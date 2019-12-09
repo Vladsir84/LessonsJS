@@ -18,10 +18,10 @@
 
 
 
-function defer(func, ms) {
+export function defer(func, ms){
     return function() {
-        setTimeout(() => func.apply(this, arguments), ms);
-    }
+        setTimeout(() => func.call(this, ...arguments), ms);
+    } 
 }
 
 // const sum = (a, b) => {
