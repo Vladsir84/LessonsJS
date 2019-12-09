@@ -19,9 +19,9 @@ export const user = {
     }
 };
 
-user.getFullName();
+// user.getFullName();
 
-const func = user.getFullName.bind(user);
+// const func = user.getFullName.bind(user);
 
 // func();
 
