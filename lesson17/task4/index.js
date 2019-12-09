@@ -7,8 +7,7 @@
 
             setFullName(fullName) {
                 let elem = fullName.split(' ');
-                this.firstName = elem[0];
-                this.lastName = elem[1];
-            }
+                [this.firstName, this.lastName] = elem;
+             }
         }
        
