@@ -12,4 +12,11 @@ it('should get the array', () => {
     const add = item.getRecords();
     expect(add).toEqual([]);
 
-    });
+    const string = createLogger();
+    string.warn('Attention!');
+    string.error('We have a problem');
+    string.log('string');
+    const arrData = string.getRecords();
+    expect(arrData).toEqual(['Attention!', 'We have a problem', 'string']);
+
+});
