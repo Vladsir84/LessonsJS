@@ -1,37 +1,18 @@
-// own props
-
-
-const vehicle = {
-    isMoving: false,
-    move() {
-        console.log(`${this.name} moving`);
+export const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
     },
-    stop() {
-        console.log(`${this.name} stopped`);
-        console.log('stopped');
-    }
-};
+    set fullName(value) {
+        const [firstName, lastName] = value.split(' ');
+        this.firstName = firstName;
+        this.lastName = lastName;
 
-const ship = {
-    name: 'Aurora',
-    hasWheels: false,
-    LiftAnchorDown() {
-        console.log('lifting anchor down');
-    },
-    LiftAnchorUp() {
-        console.log('lifting anchor up');
+        // return `${this.firstName} ${this.lastName}`;
     },
 };
 
+user.fullName = 'Tom Hardy';
 
-Object.setPrototypeOf(ship, vehicle);
-
-for (let prop in ship) {
-    if (ship.hasOwnProperty(prop)) {
-        console.log(prop);
-    }
-
-}
-
-
-console.log(Object.keys(ship));
+console.log(user.firstName);
