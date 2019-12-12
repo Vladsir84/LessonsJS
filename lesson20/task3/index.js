@@ -1,7 +1,7 @@
 export class Wallet {
     _balance = 0;
 
-    getBallance() {
+    getBalance() {
         return this._balance;
     }
 
