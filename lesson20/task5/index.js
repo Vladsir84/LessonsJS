@@ -35,7 +35,7 @@ export class UserRepository {
     getUserNameById(id) {
         return this.users
             .filter(item => item.id === id)
-            .map(item => item.name)[0];
+            .map(item => item.name) + '';
     }
 
 }
