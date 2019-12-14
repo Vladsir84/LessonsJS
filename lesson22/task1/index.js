@@ -31,7 +31,6 @@ spanElem.addEventListener('click', logGreySpan, true);
 spanElem.addEventListener('click', logGreenSpan);
 
 
-
 const clearBtnFunc = () => {
     const eventsListElem = document.querySelector('.events-list');
     eventsListElem.innerHTML = '';
@@ -59,33 +58,3 @@ const attachHandlersBtnFunk = () => {
 };
 attachHandlersBtn.addEventListener('click', attachHandlersBtnFunk);
 removeHandlersBtn.addEventListener('click', removeHandlersBtnFunc);
-
-
-
-
-
-
-
-
-
-
-// divElem.addEventListener('click', logGreenDiv);
-// pElem.addEventListener('click', event => {
-//     logGreenP();
-//     console.log(event);
-//     // event.stopPropagation();
-// });
-// spanElem.addEventListener('click', logGreenSpan);
-
-
-// elem.addEventListener('click', () => {
-//     console.log('div1');
-// });
-
-// const handler = () => {
-//     console.log('div');
-// }
-
-// elem.addEventListener('click', handler);
-
-// elem.removeEventListener('click', handler);
