@@ -40,7 +40,7 @@ const renderListItems = listItems => {
         if (!isCheckbox) {
             return;
         }
-        const taskData = tasks.find(task => task.id == event.target.id);
+        const taskData = tasks.find(task => task.id === event.target.id);
         Object.assign(taskData, { done: event.target.checked });
         const listItem = document.querySelector('.list');
         listItem.innerHTML = '';
