@@ -24,7 +24,6 @@ const renderListItems = listItems => {
             checkboxElem.setAttribute('type', 'checkbox');
             checkboxElem.setAttribute('id', id);
             checkboxElem.checked = done;
-            checkboxElem.setAttribute('id', id);
             checkboxElem.classList.add('list__item-checkbox');
             listItemElem.append(checkboxElem, text);
 
