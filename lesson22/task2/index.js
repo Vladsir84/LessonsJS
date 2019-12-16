@@ -1,6 +1,6 @@
 const tasks = [
     { text: 'Buy milk', done: false, id: Math.floor(Math.random() * 10) },
-    { text: 'Pick up Tom from airport', id: Math.floor(Math.random() * 10) },
+    { text: 'Pick up Tom from airport', done: false, id: Math.floor(Math.random() * 10) },
     { text: 'Visit party', done: false, id: Math.floor(Math.random() * 10) },
     { text: 'Visit doctor', done: true, id: Math.floor(Math.random() * 10) },
     { text: 'Buy meat', done: true, id: Math.floor(Math.random() * 10) },
