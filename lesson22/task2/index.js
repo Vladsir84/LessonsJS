@@ -51,9 +51,7 @@ createTaskBtn.addEventListener('click', () => {
 
 
 const addTask = event => {
-//     console.log(event);
-//     console.log(event.target);
-//     console.log(event.target.dataset);
+
     const isCheckbox = event.target.classList.contains('list__item-checkbox');
     if (!isCheckbox) {
         return;
