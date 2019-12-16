@@ -22,7 +22,7 @@ const renderListItems = listItems => {
             }
             const checkboxElem = document.createElement('input');
             checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.setAttribute('data-id', id);
+            checkboxElem.setAttribute('id', id);
             checkboxElem.checked = done;
             checkboxElem.setAttribute('id', id);
             checkboxElem.classList.add('list__item-checkbox');
