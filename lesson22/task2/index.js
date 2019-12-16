@@ -64,4 +64,4 @@ const addTask = event => {
 };
 
 const taskList = document.querySelector('.list');
-const taskList = taskList.addEventListener('click', addTask);
+taskList.addEventListener('click', addTask);
