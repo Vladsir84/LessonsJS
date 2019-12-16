@@ -6,8 +6,7 @@
     { text: 'Visit doctor', done: true, date: new Date(), id: Math.floor(Math.random() * 1000), },
 
 ];
-
-
+ 
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
 
