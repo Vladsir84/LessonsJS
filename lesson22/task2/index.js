@@ -6,7 +6,7 @@ const tasks = [
     { text: 'Buy meat', done: true, date: new Date(), id: Math.floor(Math.random() * 10) },
 ];
 
-
+// TODO List
 
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
@@ -33,6 +33,9 @@ const renderListItems = listItems => {
 };
 renderListItems(tasks);
 
+
+// Button
+
 const createTaskBtn = document.querySelector('.create-task-btn');
 createTaskBtn.addEventListener('click', () => {
     const input = document.querySelector('.task-input');
@@ -44,7 +47,7 @@ createTaskBtn.addEventListener('click', () => {
     renderListItems(tasks);
 });
 
-
+// Checkbox
 
 const taskList = document.querySelector('.list');
 const addTask = event => {
