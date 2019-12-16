@@ -1,22 +1,10 @@
 const tasks = [
-    { text: 'Buy milk', done: false, id: Math.floor(Math.random() * 10) },
-    { text: 'Pick up Tom from airport', done: false, id: Math.floor(Math.random() * 10) },
-    { text: 'Visit party', done: false, id: Math.floor(Math.random() * 10) },
-    { text: 'Visit doctor', done: true, id: Math.floor(Math.random() * 10) },
-    { text: 'Buy meat', done: true, id: Math.floor(Math.random() * 10) },
+    { text: 'Buy milk', done: false, date: new Date(), id: Math.floor(Math.random() * 1000), },
+    { text: 'Pick up Tom from airport', done: false, date: new Date(), id: Math.floor(Math.random() * 100), },
+    { text: 'Visit party', done: false, date: new Date(), id: Math.floor(Math.random() * 1000), },
+    { text: 'Visit doctor', done: true, date: new Date(), id: Math.floor(Math.random() * 1000), },
+    { text: 'Buy meat', done: true, date: new Date(), id: Math.floor(Math.random() * 1000), },
 ];
-
-const createTaskBtn = document.querySelector('.create-task-btn');
-createTaskBtn.addEventListener('click', () => {
-    const input = document.querySelector('.task-input');
-    if (!input.value) return;
-    tasks.unshift({ text: input.value, done: false, });
-    const listItem = document.querySelector('.list');
-    listItem.innerHTML = '';
-    input.value = '';
-    renderListItems(tasks);
-
-});
 
 
 const renderListItems = listItems => {
@@ -24,6 +12,7 @@ const renderListItems = listItems => {
 
     const listItemsElems = listItems
         .sort((a, b) => a.done - b.done)
+        .sort((a, b) => a.date - b.date)
         .map(({ text, done, id }) => {
             const listItemElem = document.createElement('li');
             listItemElem.classList.add('list__item');
@@ -32,6 +21,7 @@ const renderListItems = listItems => {
             }
             const checkboxElem = document.createElement('input');
             checkboxElem.setAttribute('type', 'checkbox');
+            checkboxElem.setAttribute('data-id', id);
             checkboxElem.checked = done;
             checkboxElem.setAttribute('id', id);
             checkboxElem.classList.add('list__item-checkbox');
@@ -42,6 +32,7 @@ const renderListItems = listItems => {
 
     listElem.append(...listItemsElems);
 
+    let check = document.querySelectorAll('.list__item-checkbox');
 
     const addTask = event => {
 
@@ -62,3 +53,15 @@ const renderListItems = listItems => {
 };
 
 renderListItems(tasks);
+
+const createTaskBtn = document.querySelector('.create-task-btn');
+createTaskBtn.addEventListener('click', () => {
+    const input = document.querySelector('.task-input');
+    if (!input.value) return;
+    tasks.unshift({ text: input.value, done: false, });
+    const listItem = document.querySelector('.list');
+    listItem.innerHTML = '';
+    input.value = '';
+    renderListItems(tasks);
+
+});
