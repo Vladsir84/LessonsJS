@@ -6,7 +6,18 @@ const tasks = [
     { text: 'Buy meat', done: true, id: Math.floor(Math.random() * 10) },
 ];
 
-// TODO List
+const createTaskBtn = document.querySelector('.create-task-btn');
+createTaskBtn.addEventListener('click', () => {
+    const input = document.querySelector('.task-input');
+    if (!input.value) return;
+    tasks.unshift({ text: input.value, done: false, });
+    const listItem = document.querySelector('.list');
+    listItem.innerHTML = '';
+    input.value = '';
+    renderListItems(tasks);
+
+});
+
 
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
@@ -30,39 +41,24 @@ const renderListItems = listItems => {
         });
 
     listElem.append(...listItemsElems);
+
+
+    const addTask = event => {
+
+        const isCheckbox = event.target.classList.contains('list__item-checkbox');
+        if (!isCheckbox) {
+            return;
+        }
+        const taskData = tasks.find(task => task.id == event.target.id);
+        Object.assign(taskData, { done: event.target.checked });
+        const listItem = document.querySelector('.list');
+        listItem.innerHTML = '';
+        renderListItems(tasks);
+
+    };
+
+    const taskList = document.querySelector('.list');
+    taskList.addEventListener('click', addTask);
 };
+
 renderListItems(tasks);
-
-
-// Button
-
-const createTaskBtn = document.querySelector('.create-task-btn');
-createTaskBtn.addEventListener('click', () => {
-    const input = document.querySelector('.task-input');
-    if (!input.value) return;
-    tasks.unshift({ text: input.value, done: false, });
-    const listItem = document.querySelector('.list');
-    listItem.innerHTML = '';
-    input.value = '';
-    renderListItems(tasks);
-});
-
-// Checkbox
-
-
-const addTask = event => {
-
-    const isCheckbox = event.target.classList.contains('list__item-checkbox');
-    if (!isCheckbox) {
-        return;
-    }
-    const taskData = tasks.find(task => task.id == event.target.id);
-    Object.assign(taskData, { done: event.target.checked });
-    const listItem = document.querySelector('.list');
-    listItem.innerHTML = '';
-    renderListItems(tasks);
-
-};
-
-const taskList = document.querySelector('.list');
-taskList.addEventListener('click', addTask);
