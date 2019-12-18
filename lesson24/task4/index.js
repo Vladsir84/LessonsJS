@@ -13,8 +13,8 @@ export const studentsBirthDays = students => {
         let month = birthArray[i].birthDate;
         month = (month + '').split(' ');
         let monthNumber = month[1] + '';
-        if (!result.hasOwnProperty(monthNumber)) result[monthNumber] = [];
-        result[monthNumber].push(birthArray[i].name);
+        if (!res.hasOwnProperty(monthNumber)) result[monthNumber] = [];
+        res[monthNumber].push(birthArray[i].name);
     }
 
     return res;
