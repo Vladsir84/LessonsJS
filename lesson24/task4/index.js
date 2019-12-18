@@ -3,6 +3,7 @@ export const studentsBirthDays = students => {
        let birthArray = [...students].map((student) => {
          let date = student.birthDate.split('/').reverse();
          [date[1], date[2]] = [date[2], date[1]];
+         date = date.join(', ');
          student.birthDate = new Date(date);
          return student;
      });
