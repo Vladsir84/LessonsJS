@@ -1,5 +1,5 @@
 export const studentsBirthDays = students => {
-       let result = {};
+       let res = {};
        let birthArray = [...students].map((student) => {
          let date = student.birthDate.split('/').reverse();
          [date[1], date[2]] = [date[2], date[1]];
@@ -18,5 +18,5 @@ export const studentsBirthDays = students => {
         result[monthNumber].push(birthArray[i].name);
     }
 
-    return result;
+    return res;
 }
