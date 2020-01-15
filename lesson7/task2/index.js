@@ -3,9 +3,9 @@
 // const sortArray = numbers => {
 //     function compare(a, b) {
 //         if (a > b) {
-//             return 1;
+//             return 1; // да
 //         }
-//         return -1;
+//         return -1; // нет
 //     }
 //     numbers.sort(compare);
 
@@ -16,7 +16,7 @@
 // console.log(sortArray(arr));
 
 const sortArray = numbers =>
-    numbers.slice().sort((a, b) => b - a);
+    numbers.slice().sort((a, b) => b - a); // если функция имеет одно выражение return
 
 const arr = [2, 4, 1, 5, 21, 18];
 

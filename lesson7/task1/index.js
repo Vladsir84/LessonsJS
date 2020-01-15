@@ -1,13 +1,27 @@
 // const getSpecialNumbers = numbers => {
 //     let specialNumbers = [];
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] % 3 === 0) {
+//             specialNumbers.push(numbers[i]);
+//         }
+//     }
 
-//     const result = numbers.forEach(num => {
+//     return specialNumbers;
+// };
+
+// const arr = [1, 2, 3, 4, 5, 6];
+// console.log(getSpecialNumbers(arr));
+
+// const getSpecialNumbers = numbers => {
+//     let specialNumbers = [];
+
+//     numbers.forEach(num => {
 //         if (num % 3 === 0) {
 //             specialNumbers.push(num);
 //         }
 //     });
 
-//     return result;
+//     return specialNumbers;
 // };
 
 // const arr = [1, 2, 3, 4, 5, 6];
@@ -18,10 +32,7 @@
 //     let specialNumbers = [];
 
 //     const result = numbers.filter(num => {
-//         if (num % 3 === 0) {
-//             return true;
-//         }
-//         return false;
+//         return num % 3 === 0 ? true : false;
 //     });
 
 //     return result;
