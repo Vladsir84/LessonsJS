@@ -28,6 +28,6 @@ export const calc = initValue => {
     return calculator;
 };
 
-const result = calc(3).add(2).mult(4).div(10).substract(5).result();
+const result = calc(3).add(2).mult(4).div(10).subtract(5).result();
 
 console.log(result);
