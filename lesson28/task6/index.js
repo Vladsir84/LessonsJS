@@ -1,10 +1,10 @@
-function fibonacci(num) {
+export function fibonacci(num) {
     if (num < 1) {
         return 1;
     }​
     return fibonacci(num - 1) + fibonacci(num - 2);
 }​
-function maxFibonacci(input) {
+export function maxFibonacci(input) {
     let index = 0;
 
     let maxFib = 0;​
