@@ -12,14 +12,14 @@
 // const endTime = new Date();
 // console.log(`Cycle took ${endTime - startTime}ms`);
 
-export const addImage = (imgSrc, callback) => {
+export function addImage(imgSrc, callback) {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My Photo');
     imgElem.src = imgSrc;
     const containerElem = document.querySelector('.page');
     containerElem.append(imgElem);
 
-    const onImageLoaded = () => {
+    function onImageLoaded() {
         callback(null, { width: 200, height: 100 });
     };
 
@@ -28,7 +28,7 @@ export const addImage = (imgSrc, callback) => {
     imgElem.addEventListener('error', () => callback('Image load failed'));
 
 
-const callback = (error) => {
+function callback(error) {
     if (error) {
         console.log(error);
         return;
