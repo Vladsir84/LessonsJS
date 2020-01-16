@@ -1,22 +1,13 @@
-// compose
-
-// compose(func1, func2, ...) =>
-
-// doEverything
-
-const add3 = value => value + 3;
-const mult2 = value => value * 2;
-const div4 = value => value / 4;
+const add2 = value => value + 2;
+const square = value => value * value; 
+const half = value => value / 2;
 
 
-const compose = (...funcs) => value => {
+export const compose = (...funcs) => value => {
     return funcs.reduce((acc, func) => func(acc), value);
 };
 
-const doEverything = compose(
-    add3,
-    mult2,
-    div4,
-);
+export const superFunc = compose(add2, square, half);
+ superFunc(2); // 8 
 
 console.log(doEverything(3));
