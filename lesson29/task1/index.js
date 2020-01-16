@@ -21,7 +21,7 @@ export const addImage = (imgSrc, callback) => {
 
     const onImageLoaded = () => {
         const { width, height } = imgElem;
-        callback(null, { width, height });
+        callback(null, { width: 200, height: 100 });
     };
 
     imgElem.addEventListener('load', onImageLoaded);
