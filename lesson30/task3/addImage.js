@@ -1,20 +1,17 @@
-import { addImage } from './addImage.js';
+export function addImage(imgSrc, callback) {
+        const imgElem = document.createElement('img');
+        imgElem.setAttribute('alt', 'My Photo');
+        imgElem.src = imgSrc;
 
-let imgSrc = 'https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson15/task1/big.jpeg';
+        const containerElem = document.querySelector('.page');
+        containerElem.append(imgElem);
 
-export const addImageV2 = imgSrc => {
-    return new Promise((resolve, reject) => {
-        const callback = (error, data) => {
-            if (error) {
-                reject(error);
-            } else {
-                resolve(data);
-            }
-        };
-        addImage(imgSrc, callback);
-    });
-};
+        function onImageLoaded() {
+            callback(null, { width: 200, height: 100 });
+        }
 
-addImageV2(imgSrc)
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
+        imgElem.addEventListener('load', onImageLoaded);
+
+        imgElem.addEventListener('error', () => callback('Image load failed'));
+
+    };
