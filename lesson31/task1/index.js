@@ -17,7 +17,7 @@ export const requestUserData = userId => {
             }, 1000);
         }
     });
-    return request;
+//     return request;
 };
 
 // requestUserData('broken')
