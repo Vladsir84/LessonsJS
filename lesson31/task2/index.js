@@ -11,12 +11,12 @@ export const asyncCalculator = num => new Promise((resolve) => {
             resolve(result);
         }, 500);
     }))
-
-asyncCalculator(4)
-    .then(value => {
+   
+   .then(value => {
         const result = value * 2;
         console.log(`Doubled value: ${result}`);
         return result;
     })
 
+asyncCalculator(4)
 .then(value => console.log(value));
