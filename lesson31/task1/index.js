@@ -11,13 +11,13 @@ export const requestUserData = userId => {
                 resolve({
                     name: 'John',
                     age: 17,
-                    email: `${userId}@mail.com`,
+                    email: `${userId}@example.com`,
                     userId,
                 });
             }, 1000);
         }
     });
-//     return request;
+    return request;
 };
 
 // requestUserData('broken')
