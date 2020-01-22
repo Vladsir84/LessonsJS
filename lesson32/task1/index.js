@@ -16,8 +16,8 @@ const getSum = numbers =>
 
 export const asyncSum = (...asyncNumbers) => {
     return Promise.all(asyncNumbers)
-        .then(numbers => console.log(numbers))
-        .catch(() => Promise.reject(new Error('Can\'t calculate')));
+        .then(numbers => getSum(numbers))
+        .catch(error => Promise.reject(new Error('Can\'t calculate')));
 };
 
 asyncSum(asyncNum1, Promise.reject(new Error('error')), asyncNum3)
