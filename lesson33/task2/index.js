@@ -1,7 +1,7 @@
 const userAvatarElem = document.querySelector('.user__avatar');
 const userNameElem = document.querySelector('.user__name');
 const showUserBtnElem = document.querySelector('.name-form__btn');
-const userNameInputElem = document.querySelector('.name-form__input');
+
 const userIdInputElem = document.querySelector('.id-form__input');
 const userRepoInputElem = document.querySelector('.repo-form__input');
 const userDaysInputElem = document.querySelector('.days-form__input');
@@ -11,8 +11,8 @@ userAvatarElem.src = defaultAvatar;
 
 const fetchUserData = userName => {
     return fetch(`https://api.github.com/users/${userName}`)
-        .then(response => response.json())
-}
+        .then(response => response.json());
+};
 
 const renderUserData = userData => {
 
@@ -44,7 +44,7 @@ showUserBtnElem.addEventListener('click', getUserObject);
 export function getMostActiveDevs({ userId, repoId, days }) { // Значения в основной функции как объект
     const commits = { userId, repoId, days };
     let counter = 0;
-    const startDate = new Date(new Date().setDate(new Date().getDate() - commits.days)); 
+    const startDate = new Date(new Date().setDate(new Date().getDate() - commits.days));
     fetch(`https://api.github.com/repos/${commits.userId}/${commits.repoId}/commits?per_page=100`) // Запрос
         .then(response => response.json()) // Преобразование с помощью json
         .then(arr => {
@@ -57,6 +57,12 @@ export function getMostActiveDevs({ userId, repoId, days }) { // Значени�
                         [email]: { name, email, count: oldCount + 1 }
                     };
                 }, {})
-
+            const array = Object.values(result);
+            array.forEach(elem => {
+                if (elem.count > counter) {
+                    counter = elem.count
+                }
+            })
+            return array.filter(elem => elem.count === counter);
     })
 }
