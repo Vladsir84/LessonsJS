@@ -41,7 +41,7 @@ const getUserObject = () => { // Значения из инпутов.
 showUserBtnElem.addEventListener('click', getUserObject);
 
 
-export const getMostActiveDevs = ({ userId, repoId, days }) => {// Значения в основной функции как объект
+export const getMostActiveDevs = ({ days, userId, repoId }) => {// Значения в основной функции как объект
     const commits = { days };
     let counter = 0;
     const startDate = new Date(new Date().setDate(new Date().getDate() - commits.days));
