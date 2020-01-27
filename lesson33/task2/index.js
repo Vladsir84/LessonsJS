@@ -58,8 +58,5 @@ export function getMostActiveDevs({ userId, repoId, days }) { // Значени�
                     };
                 }, {})
 
-
-
-        })
-
+    })
 }
