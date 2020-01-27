@@ -44,11 +44,11 @@ showUserBtnElem.addEventListener('click', getUserObject);
 export function getMostActiveDevs({ userId, repoId, days }) { // Значения в основной функции как объект
     const commits = { userId, repoId, days };
     let counter = 0;
-    const startDate = new Date(new Date().setDate(new Date().getDate() - commits.days));
+    const startDate = new Date(new Date().setDate(new Date().getDate() - commits.days)); 
     fetch(`https://api.github.com/repos/${commits.userId}/${commits.repoId}/commits?per_page=100`) // Запрос
         .then(response => response.json()) // Преобразование с помощью json
         .then(arr => {
-            let result = arr.map(({ commit: { author: { name, email, date } } }) => ({ name, email, date }))
+            let result = arr.map(({ commit: { author: { name, email, date } } }) => ({ name, email, date })) // получаем дату
                 .filter(item => new Date(item.date) > startDate)
                 .reduce((acc, { email, name }) => {
 
