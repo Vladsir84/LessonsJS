@@ -45,7 +45,7 @@ export function getMostActiveDevs({ userId, repoId, days }) { // Значени�
     const commits = { userId, repoId, days };
     let counter = 0;
     const startDate = new Date(new Date().setDate(new Date().getDate() - commits.days));
-    fetch(`https://api.github.com/repos/${commits.userId}/${commits.repoId}/commits?per_page=100`) // Запрос
+    fetch(`https://api.github.com/repos/${userId}/${repoId}/commits?per_page=100`) // Запрос
         .then(response => response.json()) // Преобразование с помощью json
         .then(arr => {
             let result = arr.map(({ commit: { author: { name, email, date } } }) => ({ name, email, date })) // получаем дату
