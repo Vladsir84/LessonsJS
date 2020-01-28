@@ -59,10 +59,10 @@ export const getMostActiveDevs = ({ days, userId, repoId }) => {// Значен�
                 }, {})
             const array = Object.values(result);
             array.forEach(elem => {
-                if (elem.count > counter) {
+                if (elem.count > counter) 
                     counter = elem.count
-                }
-            })
+                
+            });
             return array.filter(elem => elem.count === counter);
-    })
-}
+    });
+};
