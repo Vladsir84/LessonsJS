@@ -52,7 +52,7 @@ export const getMostActiveDevs = ({ days, userId, repoId }) => { // Значен
                 .filter(item => new Date(item.date) > startDate)
                 .reduce((acc, { email, name }) => {
 
-                    const oldCount = acc[email] ? acc[email].count : 0;
+                    const oldCount = acc[email] ? acc[email].count : 0; // Изменение значения свойства count
                     return {...acc,
                         [email]: { name, email, count: oldCount + 1 }
                     };
