@@ -1,8 +1,8 @@
 const emailInputElem = document.querySelector('#email');
 const passwordInputElem = document.querySelector('#password');
 const submitBtnElem = document.querySelector('.submit-button');
-const emailErrorElem = document.querySelector('.error-text_email');
-const passwordErrorElem = document.querySelector('.error-text_password');
+const errorFieldElem = document.querySelector('.error-text');
+
 
 const baseUrl = 'https://crudcrud.com/api/d234f3c9e3c7467dae82dca317c7aa15/users';
 const formElem = document.querySelector('.login-form');
@@ -19,12 +19,12 @@ const reportValidity = () => {
 
     }
 
-    emailErrorElem.textContent = '';
-    passwordErrorElem.textContent = '';
+    errorFieldElem.textContent = '';
 
 }
 
 formElem.addEventListener('input', reportValidity);
+
 
 const dataSave = data => {
     return fetch(baseUrl, {
@@ -49,8 +49,8 @@ const formSubmit = event => {
             formElem.reset();
         })
         .catch(() => {
-            emailErrorElem.textContent = 'Failed to create user';
-            passwordErrorElem.textContent = 'Failed to create user';
+            errorFieldElem.textContent = 'Failed to create user';
+
 
         });
 
