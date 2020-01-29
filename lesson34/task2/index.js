@@ -26,9 +26,6 @@ const reportValidity = () => {
 
 formElem.addEventListener('input', reportValidity);
 
-
-
-
 const dataSave = data => {
     return fetch(baseUrl, {
         method: 'POST',
