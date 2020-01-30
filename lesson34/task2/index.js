@@ -7,9 +7,6 @@ const errorFieldElem = document.querySelector('.error-text');
 const baseUrl = 'https://crudcrud.com/api/d234f3c9e3c7467dae82dca317c7aa15/users';
 const formElem = document.querySelector('.login-form');
 
-
-
-
 const dataSave = data => {
     return fetch(baseUrl, {
         method: 'POST',
