@@ -35,7 +35,7 @@ const formSubmit = event => {
 
         });
 
-    submitBtnElem.setAttribute('enabled', 'enabled');
+    submitBtnElem.setAttribute('enabled');
 }
 
 formElem.addEventListener('submit', formSubmit);
