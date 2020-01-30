@@ -21,7 +21,7 @@ const formSubmit = event => {
     event.preventDefault();
 
     const formData = [...new FormData(formElem)]
-        .reduce((acc, [key, value]) => ({...acc, [key]: value }), {});
+        .reduce((acc, [field, value]) => ({...acc, [field]: value }), {});
 
     dataSave(formData)
         .then(response => response.json())
