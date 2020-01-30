@@ -1,11 +1,26 @@
 const emailInputElem = document.querySelector('#email');
 const passwordInputElem = document.querySelector('#password');
 const submitBtnElem = document.querySelector('.submit-button');
-const errorFieldElem = document.querySelector('.error-text');
+const errorElem = document.querySelector('.error-text');
 
 
-const baseUrl = 'https://crudcrud.com/api/d234f3c9e3c7467dae82dca317c7aa15/users';
+const baseUrl = 'https://crudcrud.com/api/5070c298241c41089c8031bddf237ead/users';
 const formElem = document.querySelector('.login-form');
+
+const onInputChange = () => {
+    const isValidForm = formElem.reportValidity();
+    if (isValidForm) {
+        submitBtnElem.removeAttribute('disabled');
+        errorElem.textContent = '';
+    } else {
+        submitBtnElem.setAttribute('disabled', true);
+        errorElem.textContent = '';
+    }
+};
+
+emailInputElem.addEventListener('input', onInputChange);
+passwordInputElem.addEventListener('input', onInputChange);
+
 
 const dataSave = data => {
     return fetch(baseUrl, {
@@ -21,7 +36,7 @@ const formSubmit = event => {
     event.preventDefault();
 
     const formData = [...new FormData(formElem)]
-        .reduce((acc, [field, value]) => ({...acc, [field]: value }), {});
+        .reduce((acc, [key, value]) => ({...acc, [key]: value }), {});
 
     dataSave(formData)
         .then(response => response.json())
@@ -30,8 +45,9 @@ const formSubmit = event => {
             formElem.reset();
         })
         .catch(() => {
-            errorFieldElem.textContent = 'Failed to create user';
-       });
+            errorElem.textContent = 'Failed to create user';
+
+        });
 
     submitBtnElem.setAttribute('enabled', 'disabled');
 }
