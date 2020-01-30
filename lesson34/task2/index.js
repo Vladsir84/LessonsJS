@@ -7,23 +7,7 @@ const errorFieldElem = document.querySelector('.error-text');
 const baseUrl = 'https://crudcrud.com/api/d234f3c9e3c7467dae82dca317c7aa15/users';
 const formElem = document.querySelector('.login-form');
 
-// const reportValidity = () => {
 
-//     if (!emailInputElem.value.includes('@') ||
-//         passwordInputElem.value.length < 1) {
-
-//         submitBtnElem.setAttribute('disabled', 'disabled');
-//     } else {
-//         submitBtnElem.removeAttribute('disabled');
-//         submitBtnElem.setAttribute('enabled', 'enabled');
-
-//     }
-
-//     errorFieldElem.textContent = '';
-
-// }
-
-// formElem.addEventListener('input', reportValidity);
 
 
 const dataSave = data => {
