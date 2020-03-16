@@ -1,14 +1,16 @@
-let sum = 0;
+const m = 30;
+const n = 40;
+let result = 0;
 
-for (let i = 0; i <= 1000; i++) {
-    if (i % 2 === 1) {
-        sum += i;
-        console.log('Found');
+for (let i = m; i <= n; i++) {
+    if (i % 2 === 0 && i % 4 !== 0) {
+        result += i;
+    } else if (i % 3 === 0) {
+        result -= i;
+    } else if (i % 4 === 0) {
+        result *= i;
+    } 
+    if (i % 5 === 0) {
+        console.log(i);
     }
-}
-
-if (sum * 5 > 5000) {
-    console.log('Bigger');
-} else if (sum * 5 <= 5000) {
-    console.log('Smaller or equal');
 }

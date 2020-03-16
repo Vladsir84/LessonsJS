@@ -7,7 +7,6 @@ export const getTasksList = () => {
     return fetch('https://crudcrud.com/api/69aff18485424424bb52f3a5337f057f/tasks')
         .then(response => response.json())
         .then(tasks => mapTasks(tasks))
-
 };
 
 export const createTask = taskData => {

@@ -61,3 +61,4 @@ user.sayHi();
 // console.log('text'.toUpperCase());
 
 console.log(1..toFixed());
+const copyObj = obj => Object.assign({}, obj);

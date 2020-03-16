@@ -1,12 +1,3 @@
-const obj = {
-    name: 'Tom',
-    age: 17,
-    interest: 'football',
-    'my name': 'Bob',
-    [prop + 'name']: 'value',
-};
-
-
 const pickProps = (obj, arr) => {
     let object = {};
 
@@ -18,5 +9,3 @@ const pickProps = (obj, arr) => {
 
     return object;
 };
-
-console.log(object);

@@ -1,4 +1,4 @@
-const tasks = [
+   const tasks = [
     { text: 'Visit party', done: false, date: new Date(), id: Math.floor(Math.random() * 1000), },
     { text: 'Pick up Tom from airport', done: false, date: new Date(), id: Math.floor(Math.random() * 1000), },
     { text: 'Buy milk', done: false, date: new Date(), id: Math.floor(Math.random() * 1000), },
@@ -6,8 +6,7 @@ const tasks = [
     { text: 'Visit doctor', done: true, date: new Date(), id: Math.floor(Math.random() * 1000), },
 
 ];
-
-
+ 
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
 

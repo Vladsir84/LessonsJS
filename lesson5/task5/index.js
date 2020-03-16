@@ -1,10 +1,7 @@
-const getSum = function(a, b) {
-    if (a % 2 === 0 && b % 2 === 0) {
-        return sum(even);
+function getSum(a, b){
+    let sum = 0;
+    for(let i = a; i <= b; i++){
+        if(i % 2 === 0) sum += i;
     }
-
-};
-
-const result = getSum(20, 5);
-
-console.log(result);
+    return sum;
+}

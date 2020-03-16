@@ -1,13 +1,9 @@
-var greeting = 'Hello';
+var arr = [];
 
-function sayHi() {
-    greeting = 'Hi';
-    console.log(greeting);
-
-    if (false) {
-        var greeting;
+for (let i = 0; i < 10; i++) {
+    arr[i] = function() {
+        return i;
     }
 }
 
-sayHi();
-console.log(greeting);
+export { arr };

@@ -16,12 +16,12 @@ const request = url => new Promise(resolve => {
 });
 
 const servers = [
-    'https://server.com/us',
-    'https://server.com/eu',
-    'https://server.com/au',
+    'https://server.com/us/userId',
+    'https://server.com/eu/userId',
+    'https://server.com/au/userId',
 ];
 
-const getUserASAP = userId => {
+export const getUserASAP = userId => {
     const userUrls = servers
         .map(serverUrl => `${serverUrl}/users/${userId}`)
 

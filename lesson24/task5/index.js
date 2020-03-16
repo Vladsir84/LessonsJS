@@ -59,7 +59,6 @@ createTaskBtn.addEventListener('click', () => {
     const input = document.querySelector('.task-input');
     if (!input.value) return;
     tasks.unshift({ text: task_input.value, done: false, id: Math.floor(Math.random() * 1000) });
-    // const listItem = document.querySelector('.list');
     listItem.innerHTML = '';
     input.value = '';
     renderListItems(tasks);

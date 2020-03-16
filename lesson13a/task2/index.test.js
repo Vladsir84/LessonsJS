@@ -1,10 +1,11 @@
-import getSum, { getSquaredNumbers, getOddNumbers } from './calculator.js';
+import getSum, { getSquaredArray, getOddNumbers } from './calculator.js';
 
-it('should get squareNumbers', () => {
-    const result = getSquaredNumbers([1, 2, 3]);
-
-    expect(result).toEqual([1, 4, 9]);
+it ('should get squared array', () => {
+    const result = getSquaredArray([1,2,3]);
+    
+    expect(result).toEqual([1,4,9]);
 });
+
 
 it('should keep odd numbers only', () => {
     const result = getOddNumbers([1, 2, 3, 4, 5]);

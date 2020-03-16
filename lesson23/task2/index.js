@@ -19,6 +19,7 @@ const getLineSeats = () => generateNumbersRange(1, 10)
 
 const getSectorLines = () => {
     const seatsString = getLineSeats()
+
     return generateNumbersRange(1, 10)
         .map(lineNumber => `
             <div 
@@ -31,7 +32,9 @@ const getSectorLines = () => {
 const arenaElem = document.querySelector('.arena');
 
 const renderArena = () => {
+
     const lineString = getSectorLines();
+
     const sectorsString = generateNumbersRange(1, 3)
         .map(sectorNumber => `
          <div 

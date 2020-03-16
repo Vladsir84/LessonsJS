@@ -1,11 +1,14 @@
-const m = 10;
-const n = 20;
+const m = 55;
+const n = 77;
 let result = 1;
 
-do {
-    if (m % 2 === 1) {
-        result *= m;
-    }
-} while (m <= n);
+let i = m;
 
-console.log('Result:' + result);
+do {
+    if (i % 2 === 1) {
+        result *= i;
+   }
+   i++;
+} while (i < n);   
+
+console.log('Result: ' + result);

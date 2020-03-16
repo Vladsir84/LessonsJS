@@ -5,6 +5,6 @@ function getPrimes(n) {
             if (k != i && k != 1 && i % k === 0) a++;
         }
         if (i === 1 || i === n || a === 0)
-            console.log(i);
+           
     }
 }

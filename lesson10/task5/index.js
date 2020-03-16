@@ -11,3 +11,5 @@ function getTotalPrice(arr) {
     let rounded = Math.floor(sum * 100) / 100;
     return '$' + rounded;
 }
+const getTotalPrice = arr => '$' +
+Math.floor((arr.reduce((acc, el) => acc + el)) * 100) / 100;

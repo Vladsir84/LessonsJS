@@ -42,3 +42,8 @@ const getAdults = usersObj => Object.entries(usersObj)
     .map(user => user[0]);
 
 console.log(getAdults(users));
+const getAdults = usersObj => Object.entries(usersObj)
+    .filter(user => user[1] >= 18)
+    .map(user => user[0]);
+
+

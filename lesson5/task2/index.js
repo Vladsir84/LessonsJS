@@ -1,7 +1,7 @@
 const prefix = 'Hi, ';
 
-function sayHi(name, anotherName = 'anonymus') {
-    const greeting = prefix + name + ' and ' + anotherName;
+function sayHi(name) {
+    const greeting = prefix + name;
     console.log(greeting);
 }
 

@@ -11,17 +11,17 @@
 
 // user.sayHi();
 
-export const user = {
-    firstName: 'John',
-    lastName: 'Doe',
-    getFullName() {
-        return (`${this.firstName} ${this.lastName}`);
-    }
-};
+// export const user = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     getFullName() {
+//         return (`${this.firstName} ${this.lastName}`);
+//     }
+// };
 
-user.getFullName();
+// user.getFullName();
 
-const func = user.getFullName.bind(user);
+// const func = user.getFullName.bind(user);
 
 // func();
 
@@ -73,3 +73,10 @@ const func = user.getFullName.bind(user);
 // func.apply(anotherUther, [17, 'Hello']);
 
 // func.apply({ name: 'Tom' });
+export const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    getFullName() {
+        return (`${this.firstName} ${this.lastName}`);
+    }
+};
