@@ -6,10 +6,10 @@ function increaseEvenEl(arr, delta) {
     } 
     for (let i = 0; i <= arr.length; i++) {
      if (arr[i] % 2 === 0) 
-        arr[i] *= delta   
+        arr[i] += delta   
         
     } 
     return arr;
 }
 
-console.log(increaseEvenEl(arr, 5));
+console.log(increaseEvenEl(arr, 20));
