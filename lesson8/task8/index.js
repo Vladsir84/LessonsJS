@@ -7,10 +7,12 @@ function addPropretyV1 (userData, userId) {
     return userData
 }
 
-// function addPropretyV2 (userData, userId) {
-//     let obj = userId.id; 
-//      return obj
-//  }
+function addPropretyV2 (userData, userId) {
+  userData.id = userId; 
+     const obj1 = Object.assign({}, userData)
+     
+     return obj1
+ }
 
 //  function addPropretyV3 (userData, userId) {
 //     let obj = userId.id; 
