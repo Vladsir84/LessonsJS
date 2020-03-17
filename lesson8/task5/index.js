@@ -15,7 +15,7 @@ const transaction = {
   
   const key = 'operation';
   
-  console.log(['operation']);
+  console.log(key);
   console.log(transaction.agent['company']);
   console.log(transaction.agent.country);
   console.log(transaction['operation time']);
