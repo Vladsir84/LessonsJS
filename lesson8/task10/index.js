@@ -24,11 +24,11 @@ function mergeObjectsV3(obj1, obj2) {
     }
 
 function mergeObjectsV4(obj1, obj2) {
-     obj3 = { ...obj2, ...obj1 }
+    let obj3 = { ...obj2, ...obj1 }
         return obj3
 }
 
  
- console.log(mergeObjectsV4(obj1, obj2));
+//  console.log(mergeObjectsV4(obj1, obj2));
 
 
