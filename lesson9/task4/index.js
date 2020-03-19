@@ -19,5 +19,6 @@ const rooms = {
 
 const getPeople = (rooms) => Object.values(rooms)
 .reduce((acc, item) => acc.concat(item), [])
+.map(room => room.name)
 
 console.log(getPeople(rooms));
