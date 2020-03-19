@@ -1,11 +1,3 @@
-// copyObj
-
-// const users = {
-//     'Tom': 17,
-//     'Bob': 100,
-// };
-
-
 const obj = {
     'John Dee': 19,
     'Tom': 17,
