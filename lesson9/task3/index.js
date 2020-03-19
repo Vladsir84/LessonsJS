@@ -1,3 +1,17 @@
-const getCustomersList = obj => Object.entries(obj)
-    .map(item => item = {...item[1], id: item[0] })
-   .sort((customer1, customer2) => customer1.age > customer2.age ? 1 : -1);
+const customers = {
+    'customer-id-1':{
+        name: 'Wiliam',
+        age: 54
+    },
+    'customer-id-2': {
+        name: 'Tom',
+        age: 17,
+    }
+};
+
+
+const getCustomersList = customers => Object.entries(customers)
+ .map(customer => customer = {...customer[1] , id: customer[0]} )
+ .sort((a, b) => a.age - b.age);
+
+  console.log(getCustomersList(customers));
