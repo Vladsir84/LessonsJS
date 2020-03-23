@@ -11,4 +11,4 @@ export function createArrayOfFunctions (num) {
     return arr
 }
 
-console.log(createArrayOfFunctions('saww'))
+// console.log(createArrayOfFunctions('saww'))
