@@ -1,8 +1,8 @@
 export const createArrayOfFunctions = (num) =>{
+    let arr1 = [] 
     if (!num) return []
     if (typeof(num) !== 'number') return null   
  
-    let arr1 = [] 
     for (let i = 0; i < num ; i++) {
         arr1[i] = function(){
            return i
