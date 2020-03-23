@@ -8,7 +8,7 @@ export function createArrayOfFunctions(num) {
            return i
         }
     }
-    return arr
+    return arr1
 }
 
 // console.log(createArrayOfFunctions('err'))
