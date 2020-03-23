@@ -1,14 +1,14 @@
-export function createArrayOfFunctions (num) {
+export const createArrayOfFunctions = (num) =>{
     if (!num) return []
     if (typeof(num) !== 'number') return null   
  
     let arr1 = [] 
     for (let i = 0; i < num ; i++) {
-        arr1.push(function(){
+        arr1[i] = function(){
            return i
-        })
+        }
     }
     return arr
 }
 
-// console.log(createArrayOfFunctions('saww'))
+// console.log(createArrayOfFunctions('err'))
