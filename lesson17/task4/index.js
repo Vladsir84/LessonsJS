@@ -1,4 +1,4 @@
-export const user = {
+export let user = {
     firstName: 'John',
     lastName: 'Doe',
     getFullName() {
@@ -12,4 +12,4 @@ export const user = {
     }
 };
     
-console.log(user.firstName);
+// console.log(user.firstName);
