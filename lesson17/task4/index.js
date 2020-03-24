@@ -6,7 +6,7 @@ export let user = {
     },
     
     setFullName(fullName) {
-        let split = fullName.split('');
+        let split = fullName.split(' ');
         this.firstName = split[0];
         this.lastName = split[1];
     }
