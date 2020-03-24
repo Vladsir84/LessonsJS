@@ -16,7 +16,7 @@ export const timer = {
 
     getTime() {
         return this.secondsPassed < 10 ?
-            `${this.minsPassed}:0${this.secondsPassed}` :
+            `${this.minsPassed}:0${this.secondsPassed}`:
             `${this.minsPassed}:${this.secondsPassed}`;
     },
 
