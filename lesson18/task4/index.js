@@ -1,10 +1,10 @@
-export function spy(func) {
+export function saveCalls(func) {
     let calls = [];
-    let spies = function(...args) {
+    let withMemory = function(...args) {
         calls.push(Array.from(args));
-        spies.bind(func, args);
+        withMemory.bind(func, args);
         return func.call(this, ...args);
     };
-    spies.calls = calls;
-    return spies;
+    withMemory.calls = calls;
+    return withMemory;
 }
