@@ -1,5 +1,7 @@
 export function sumOfSquares() {
-    return [...arguments]
-        .map(elem => elem * elem)
-        .reduce((acc, elem) => acc + elem, 0);
-}
+    return [...arguments].reduce((acc, elem) => {
+      return acc + elem * elem;
+     }, 0);
+  }
+  
+console.log(sumOfSquares(1, 2, 3, 4)); // 30
