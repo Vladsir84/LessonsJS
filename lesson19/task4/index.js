@@ -7,7 +7,7 @@ User.prototype.sayHi = function () {
     console.log(`Hi, I am ${this.name}`);
 }
 
-User.prototype.sayHi = function () {
+User.prototype.requestNewPhoto = function () {
     console.log(`New photo request was sent for ${this.name}`);
 }
 
