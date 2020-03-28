@@ -6,7 +6,7 @@ export class User {
 
     
     static createEmpty() {
-        return user = {
+        return {
             name: '',
             age: null,
     }
