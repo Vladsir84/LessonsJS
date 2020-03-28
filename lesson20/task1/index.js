@@ -31,6 +31,6 @@ export class User {
     }
 }
 
-const user1 = new User('Tom', 17);
-const user2 = new User('Bob', 32);
-console.log(User.compare(user1, user2));
+// const user1 = new User('Tom', 17);
+// const user2 = new User('Bob', 32);
+// console.log(User.compare(user1, user2));
