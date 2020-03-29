@@ -14,11 +14,11 @@ export class Order {
 
     confirmOrder() {
       this.isConfirmed = true;
-      this.dateCreated = new Date;
+      this.dateCreated = new Date();
     }
 
-    isValidType(Buy, Sell) {
-       if (this.type === Buy || this.type === Sell){
+    isValidType() {
+       if (this.type === 'Buy' || this.type === 'Sell'){
            return true
        }
       return false; 
