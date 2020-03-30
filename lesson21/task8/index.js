@@ -1,4 +1,4 @@
 export const createButton = (buttonText) => {
-    const body = document.createElement('button');
-    body.append = `<button>${buttonText}</button>`;
+    const button = document.createElement('button');
+    button.append(buttonText);
 }
