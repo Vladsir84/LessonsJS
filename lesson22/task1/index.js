@@ -6,7 +6,6 @@ const clearBtn = document.querySelector('.clear-btn');
 const removeHandlersBtn = document.querySelector('.remove-handlers-btn');
 const attachHandlersBtn = document.querySelector('.attach-handlers-btn');
 
-
 const logTarget = (text, color) => {
     const eventsListElem = document.querySelector('.events-list');
     eventsListElem.innerHTML += `<span style="color: ${color}; margin-left: 8px;">${text}</span>`;
