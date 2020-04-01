@@ -31,8 +31,6 @@ const renderListItems = listItems => {
 
     listElem.append(...listItemsElems);
 
-
-
     const addTask = event => {
 
         const isCheckbox = event.target.classList.contains('list__item-checkbox');
