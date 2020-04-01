@@ -1,8 +1,4 @@
 const inputElem = document.querySelector('.text-input');
-inputElem.addEventListener('change', handleClick, true);
+inputElem.addEventListener('change', (event) => console.log(event.target.value), true);
 
-function handleClick (event) { 
-    console.log(event.target.value);
-    inputElem.addEventListener('change', handleClick, true);
-}
 
