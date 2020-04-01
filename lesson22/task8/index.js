@@ -1,9 +1,8 @@
 let buttonElem = document.querySelectorAll('.btn');
-for (let i = 0; i < buttonElem.length; i++) {
-   buttonElem[i].addEventListener('click', handleClick);
+for (let elem of buttonElem) {
+   buttonElem = elem.addEventListener('click', handleClick);
    
    function handleClick(event) {
        console.log(event.target.textContent)
     }
 }
-
