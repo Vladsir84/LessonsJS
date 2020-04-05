@@ -9,7 +9,7 @@ export function sayName() {
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента 
 // ... your code here
-sayName.call({name: 'Tom'})
+sayName.call(student)
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
