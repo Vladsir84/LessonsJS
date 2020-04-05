@@ -9,12 +9,13 @@ export function sayName() {
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента 
 // ... your code here
-export const saysName = sayName.bind(student)
+export const saysName = sayName.bind(student);
+saysName();
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
 export const sayNames = sayName.bind({name: 'Bruce'})
-
+sayNames();
 
 /* ===> 2 <=== */
 const company = {
@@ -29,7 +30,8 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-export const myGreeting =  greeting.bind( company, ['Bob', 'Marley'] );
+export const myGreeting =  greeting.bind( company, 'Bob', 'Marley');
+myGreeting();
 
 /* ===> 3 <=== */
 const country = {
@@ -45,7 +47,8 @@ function getPopulation(population) {
 // 'Population in Ukraine is 43000'
 // используйте объект country
 // ... your code here
-console.log(getPopulation.apply( country, [43000] ));
+export const getCountryPopulation = getPopulation.bind( country, 43000 );
+console.log(getCountryPopulation())
 
 
 /* ===> 4 <=== */
@@ -70,4 +73,5 @@ const anotherTransaction = {
 // '400 USD - buy on NASDAQ'
 // используйте объект anotherTransaction как контекст
 // ... your code here
-transaction.printTransaction.apply(anotherTransaction);
+export const newTransaction = transaction.printTransaction.bind(anotherTransaction);
+newTransaction();
