@@ -9,8 +9,8 @@ export function sayName() {
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента 
 // ... your code here
-export const sayStudentName = sayName.bind(student);
-sayStudentName()
+export const sayStudentsName = sayName.bind(student);
+sayStudentsName();
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
@@ -30,8 +30,8 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-export const sayBruceName =  greeting.bind( company, 'Bob', 'Marley');
-sayBruceName();
+export const sayBruceNames =  greeting.bind( company, 'Bob', 'Marley');
+sayBruceNames();
 
 /* ===> 3 <=== */
 const country = {
@@ -48,7 +48,7 @@ function getPopulation(population) {
 // используйте объект country
 // ... your code here
 export const getUkrainePopulation = getPopulation.bind( country, 43000 );
-getUkrainePopulation();
+console.log(getUkrainePopulation());
 
 
 /* ===> 4 <=== */
