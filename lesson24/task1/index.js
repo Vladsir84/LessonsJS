@@ -7,6 +7,6 @@ export const dayOfWeek = (date, days) => {
    return weekDays[new Date(dateInFuture).getDay()];
 };
 
-const result = getDayOfWeek(new Date(2019, 0, 1), 14);
+const result = dayOfWeek(new Date(2019, 0, 1), 14);
 
 console.log(result);
