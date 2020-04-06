@@ -5,8 +5,8 @@ let students = [
 ]
 
 export function studentsBirthDays(students) {
-  const arr = students.slice().sort((a, b) => (new Date(b.birthDate)) - 
-   (new Date(a.birthDate)));
+  const arr = students.slice().sort((a, b) => (new Date(a.birthDate)) - 
+   (new Date(b.birthDate)));
    return arr;
 };
 
