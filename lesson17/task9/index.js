@@ -30,8 +30,8 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-export const sayBruceName =  greeting.bind( company, 'Bob', 'Marley');
-sayBruceName();
+export const sayBruceNames =  greeting.bind( company, 'Bob', 'Marley');
+sayBruceNames();
 
 /* ===> 3 <=== */
 const country = {
