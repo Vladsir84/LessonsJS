@@ -15,7 +15,7 @@ export const sayStudentName = sayName.bind(student);
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
 export const sayBruceName = sayName.bind({name: 'Bruce'})
-
+sayBruceName();
 
 /* ===> 2 <=== */
 const company = {
@@ -31,7 +31,7 @@ function greeting(firstName, lastName) {
 // используйте объект company
 // ... your code here
 export const sayBruceName =  greeting.bind( company, 'Bob', 'Marley');
-
+sayBruceName();
 
 /* ===> 3 <=== */
 const country = {
@@ -48,7 +48,7 @@ function getPopulation(population) {
 // используйте объект country
 // ... your code here
 export const getUkrainePopulation = getPopulation.bind( country, 43000 );
-
+getUkrainePopulation();
 
 
 /* ===> 4 <=== */
@@ -74,3 +74,4 @@ const anotherTransaction = {
 // используйте объект anotherTransaction как контекст
 // ... your code here
 export const printSpecialTransaction = transaction.printTransaction.bind(anotherTransaction);
+printSpecialTransaction();
