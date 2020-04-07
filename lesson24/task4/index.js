@@ -8,8 +8,8 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May',
     'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 export function studentsBirthDays(students) {
-    const arr = students.sort((a, b) => (new Date(a.birthDate)) -
-        (new Date(b.birthDate)));
+    const arr = students.sort((a, b) => (new Date(b.birthDate).getDate()) -
+        (new Date(a.birthDate).getDate()));
     const newObj = arr.reduce((acc, { name, birthDate }) => {
         const sortMonth = months[new Date(birthDate).getMonth()];
         console.log(sortMonth);
