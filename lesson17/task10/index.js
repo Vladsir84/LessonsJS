@@ -20,18 +20,36 @@ export function calculator(a, b) {
  * и должна принимать 2 числа и возвращать из произведение
  */
 // ...your code here
-export const multiplier = operation.calculator.bind(a * b);
+
+const func1 = {
+    operation: '*',
+}
+
+export const multiplier = calculator.bind(func1, a  b);
+console.log(multiplier());
 /*
  * Ф-ция summator должна быть создана на основе calculator
  * с использования .bind
  * и должна принимать 2 числа и возвращать из сумму
  */
 // ...your code here
-export const summator = operation.calculator.bind(a + b);
+
+const func2 = {
+    operation: '+',
+}
+
+export const summator = calculator.bind(func2, a, b);
+console.log(summator());
 /*
  * Ф-ция twice должна быть создана на основе calculator
  * с использования .bind
  * и должна принимать 1 число и возвращать это число умноженное на 2
  */
 // ...your code here
-export const twice = operation.calculator.bind(a * 2);
+
+const func3 = {
+    operation: '*',
+}
+
+export const twice = calculator.bind(func3, a);
+console.log(twice(2));
