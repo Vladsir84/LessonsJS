@@ -21,11 +21,7 @@ export function calculator(a, b) {
  */
 // ...your code here
 
-const func1 = {
-    operation: '*',
-}
-
-export const multiplier = calculator.bind(func1(a, b));
+export const multiplier = calculator.bind({operation: '*'});
 console.log(multiplier());
 /*
  * Ф-ция summator должна быть создана на основе calculator
@@ -34,11 +30,8 @@ console.log(multiplier());
  */
 // ...your code here
 
-const func2 = {
-    operation: '+',
-}
-
-export const summator = calculator.bind(func2(a, b));
+ 
+export const summator = calculator.bind({operation: '+'});
 console.log(summator());
 /*
  * Ф-ция twice должна быть создана на основе calculator
@@ -47,9 +40,6 @@ console.log(summator());
  */
 // ...your code here
 
-const func3 = {
-    operation: '*',
-}
 
-export const twice = calculator.bind(func3(a));
+export const twice = calculator.bind({operation: '*'}, 2);
 console.log(twice(2));
