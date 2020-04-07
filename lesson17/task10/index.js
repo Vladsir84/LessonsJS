@@ -25,7 +25,7 @@ const func1 = {
     operation: '*',
 }
 
-export const multiplier = calculator.bind(func1, a  b);
+export const multiplier = calculator.bind(func1(a, b));
 console.log(multiplier());
 /*
  * Ф-ция summator должна быть создана на основе calculator
@@ -38,7 +38,7 @@ const func2 = {
     operation: '+',
 }
 
-export const summator = calculator.bind(func2, a, b);
+export const summator = calculator.bind(func2(a, b));
 console.log(summator());
 /*
  * Ф-ция twice должна быть создана на основе calculator
@@ -51,5 +51,5 @@ const func3 = {
     operation: '*',
 }
 
-export const twice = calculator.bind(func3, a);
+export const twice = calculator.bind(func3(a));
 console.log(twice(2));
