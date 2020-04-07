@@ -1,22 +1,23 @@
-export const studentsBirthDays = students => {
-       let res = {};
-       let birthArray = [...students].map((student) => {
-         let date = student.birthDate.split('/').reverse();
-         [date[1], date[2]] = [date[2], date[1]];
-         date = date.join(', ');
-         student.birthDate = new Date(date);
-         return student;
-     });
+let students = [
+    { name: 'Tom', birthDate: '01/15/2010' },
+    { name: 'Ben', birthDate: '01/17/2008' },
+    { name: 'Sam', birthDate: '03/15/2010' },
+]
 
-    birthArray.sort((a, b) => a.birthDate > b.birthDate ? 1 : -1);
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May',
+    'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-    for (let i = 0; i < birthArray.length; i++) {
-        let month = birthArray[i].birthDate;
-        month = (month + '').split(' ');
-        let monthNumber = month[1] + '';
-        if (!res.hasOwnProperty(monthNumber)) res[monthNumber] = [];
-        res[monthNumber].push(birthArray[i].name);
-    }
+export function studentsBirthDays(students) {
+    const arr = students.sort((a, b) => (new Date(a.birthDate)) -
+        (new Date(b.birthDate)));
+    const newObj = arr.reduce((acc, { name, birthDate }) => {
+        const sortMonth = months[new Date(birthDate).getMonth()];
+        console.log(sortMonth);
+        return { ...acc, [sortMonth]: acc[sortMonth] ? acc[sortMonth].concat(name) : [name] };
+    }, {});
 
-    return res;
-}
+
+    return newObj;
+};
+
+console.log(studentsBirthDays(students));
