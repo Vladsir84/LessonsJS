@@ -12,9 +12,9 @@ const onCounterChange = e => {
 
     const oldValue = Number(counterValueElem.textContent);
 
-    const newValue = action === 'decrease' ?
-        oldValue - 1 :
-        oldValue + 1;
+    const newValue = action === 'decrease'
+        ? oldValue - 1
+        : oldValue + 1;
 
     localStorage.setItem('counterValue', newValue);
 
@@ -24,12 +24,14 @@ const onCounterChange = e => {
 counterElem.addEventListener('click', onCounterChange);
 
 const onStorageChange = e => {
+    console.log(e);
     counterValueElem.textContent = e.newValue;
 };
+
 window.addEventListener('storage', onStorageChange);
 
 const onDocumentLoaded = () => {
-    counterValueElem.textContent = localStorage.getItem('counterValue') || 0;
-}
+   counterValueElem.textContent = localStorage.getItem('counterValue') || 0;
+};
 
 document.addEventListener('DOMContentLoaded', onDocumentLoaded);
