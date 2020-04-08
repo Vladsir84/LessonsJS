@@ -2,8 +2,8 @@ const tasks = [
     { text: 'Buy milk', done: false, startDate: new Date(), endDate: undefined },
     { text: 'Pick up Tom from airport', done: false, startDate: new Date(), endDate: undefined },
     { text: 'Visit party', done: false, startDate: new Date(), endDate: undefined },
-    { text: 'Visit doctor', done: true, startDate: new Date(), endDate: undefined },
-    { text: 'Buy meat', done: true, startDate: new Date(), endDate: undefined },
+    { text: 'Visit doctor', done: true, startDate: new Date(), endDate: new Date() },
+    { text: 'Buy meat', done: true, startDate: new Date(), endDate: new Date() },
 ];
 
 const renderListItems = listItems => {
