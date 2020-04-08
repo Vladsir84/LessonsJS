@@ -1,20 +1,25 @@
 const tasks = [
-    { text: 'Visit party', done: false, date: new Date(), id: Math.floor(Math.random() * 1000), },
-    { text: 'Pick up Tom from airport', done: false, date: new Date(), id: Math.floor(Math.random() * 1000), },
-    { text: 'Buy milk', done: false, date: new Date(), id: Math.floor(Math.random() * 1000), },
-    { text: 'Buy meat', done: true, date: new Date(), id: Math.floor(Math.random() * 1000), },
-    { text: 'Visit doctor', done: true, date: new Date(), id: Math.floor(Math.random() * 1000), },
-
+    { text: 'Buy milk', done: false, startDate: new Date(), endDate: undefined },
+    { text: 'Pick up Tom from airport', done: false, startDate: new Date(), endDate: undefined },
+    { text: 'Visit party', done: false, startDate: new Date(), endDate: undefined },
+    { text: 'Visit doctor', done: true, startDate: new Date(), endDate: undefined },
+    { text: 'Buy meat', done: true, startDate: new Date(), endDate: undefined },
 ];
-
 
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
+    listElem.innerHTML = '';
 
-    const listItemsElems = listItems
-        .sort((a, b) => b.date - a.date)
-        .sort((a, b) => a.done - b.done)
-        .map(({ text, done, id }) => {
+    const listItemsElements = listItems
+        .sort((a, b) => {
+            if (a.done - b.done !== 0) {
+                return a.done - b.done
+            };
+            a.done ? new Date(b.endDate) - new Date(a.endDate) :
+                new Date(b.startDate) - new Date(a.startDate)
+        })
+          
+        .map(({ text, done }) => {
             const listItemElem = document.createElement('li');
             listItemElem.classList.add('list__item');
             if (done) {
@@ -22,7 +27,6 @@ const renderListItems = listItems => {
             }
             const checkboxElem = document.createElement('input');
             checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.setAttribute('id', id);
             checkboxElem.checked = done;
             checkboxElem.classList.add('list__item-checkbox');
             listItemElem.append(checkboxElem, text);
@@ -30,37 +34,32 @@ const renderListItems = listItems => {
             return listItemElem;
         });
 
-    listElem.append(...listItemsElems);
+listElem.append(...listItemsElements);
 
-
-
-    const addTask = event => {
-
-        const isCheckbox = event.target.classList.contains('list__item-checkbox');
-        if (!isCheckbox) {
-            return;
-        }
-        const taskData = tasks.find(task => task.id == event.target.id);
-        Object.assign(taskData, { done: event.target.checked });
-        const listItem = document.querySelector('.list');
-        listItem.innerHTML = '';
-        renderListItems(tasks);
-
-    };
-
-    const taskList = document.querySelector('.list');
-    taskList.addEventListener('click', addTask);
 };
 
 renderListItems(tasks);
 
 const createTaskBtn = document.querySelector('.create-task-btn');
-createTaskBtn.addEventListener('click', () => {
-    const input = document.querySelector('.task-input');
-    if (!input.value) return;
-    tasks.unshift({ text: task_input.value, done: false, id: Math.floor(Math.random() * 1000) });
-    listItem.innerHTML = '';
-    input.value = '';
-    renderListItems(tasks);
+const createTask = () => {
+    const inputTask = document.querySelector('.task-input');
+    if (!inputTask.value) return false;
+    tasks.unshift({ text: inputTask.value, 
+        done: false, startDate: new Date(), endDate: undefined });
+    inputTask.value = '';
 
-});
+    renderListItems(tasks);
+};
+
+createTaskBtn.addEventListener('click', createTask);
+
+const checkedListItem = document.querySelector('.list');
+const checklistElem = event => {
+    const checklistElem = tasks.find(item =>
+        item.text === event.target.parentNode.textContent);
+    checklistElem.done = event.target.checked;
+    checklistElem.endDate = checklistElem.done ? new Date() : undefined;
+    renderListItems(tasks);
+};
+
+checkedListItem.addEventListener('click', checklistElem);
