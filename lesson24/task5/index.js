@@ -15,11 +15,13 @@ const renderListItems = listItems => {
             if (a.done - b.done !== 0) {
                 return a.done - b.done
             };
-            a.done ? new Date(b.endDate) - new Date(a.endDate) :
-                new Date(b.startDate) - new Date(a.startDate)
+             if (a.done) {
+                return new Date(b.endDate) - new Date(a.endDate); 
+             }
+            return new Date(b.startDate) - new Date(a.startDate);
         })
           
-        .map(({ text, done }) => {
+        .map(({ text, done, date }) => {
             const listItemElem = document.createElement('li');
             listItemElem.classList.add('list__item');
             if (done) {
