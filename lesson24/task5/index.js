@@ -21,7 +21,7 @@ const renderListItems = listItems => {
             return new Date(b.startDate) - new Date(a.startDate);
         })
           
-        .map(({ text, done, date }) => {
+        .map(({ text, done }) => {
             const listItemElem = document.createElement('li');
             listItemElem.classList.add('list__item');
             if (done) {
