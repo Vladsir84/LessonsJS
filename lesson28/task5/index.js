@@ -11,6 +11,7 @@ export const shmoment = date => {
             if (type === 'milliseconds') result = new Date(result.setMilliseconds(result.getMilliseconds() + value));
             return this;
         },
+        
         subtract(type, value) {
             if (type === 'years') result = new Date(result.setFullYear(result.getFullYear() - value));
             if (type === 'months') result = new Date(result.setMonth(result.getMonth() - value));
