@@ -5,8 +5,7 @@ function getRandomTime(min, max) {
 
 export const requestUserData = (userId, callback) => {
     if (userId === 'broken') {
-        setTimeout(() => callback(null, 'Failed to load user data'),
-            getRandomTime(1, 3));
+        setTimeout(() => callback(null, 'Failed to load user data'), getRandomTime(1, 3));
         return;
     }
     setTimeout(() => callback({
@@ -17,3 +16,7 @@ export const requestUserData = (userId, callback) => {
     }), getRandomTime(1, 3));
 };
 
+const onFormUserData = (firstArg, data) => {
+    if (firstArg === null) return data;
+    return firstArg;
+};
