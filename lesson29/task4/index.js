@@ -1,23 +1,20 @@
-function getRandomTime(min, max) {
-    let random = min + Math.random() * (max + 1 - min);
-    return Math.floor(random) * 1000;
-}
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 
 
 export const requestUserData = (userId, callback) => {
     if (userId === 'broken') {
-        setTimeout(() => callback(null, 'Failed to load user data'), getRandomTime(1, 3));
+        setTimeout(() => callback(null, 'Failed to load user data'), getRandomArbitrary(1, 3));
         return;
     }
     setTimeout(() => callback({
-        name: 'John',
-        age: 17,
         userId: userId,
         email: `${userId}@example.com`,
-    }), getRandomTime(1, 3));
+    }), getRandomArbitrary(1, 3));
 };
 
-const onFormUserData = (firstArg, data) => {
-    if (firstArg === null) return data;
-    return firstArg;
-};
+// const onFormUserData = (firstArg, data) => {
+//     if (firstArg === null) return data;
+//     return firstArg;
+// };
