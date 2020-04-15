@@ -1,4 +1,4 @@
-export const delay = ms => {
+export function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms), 3000);
 }
 
