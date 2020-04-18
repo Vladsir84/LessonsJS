@@ -15,10 +15,10 @@ export function getTasksList() {
 // )
   /* getTaskById code here */
 
-export function getTaskById(taskID) {
-    return fetch(baseUrl)
+export function getTaskById(id) {
+    return fetch(`${baseUrl}/${id}`)
        .then(response => {
-        return response.json(`https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/${taskID}`)
+        return response.json()
      })
 }
 
