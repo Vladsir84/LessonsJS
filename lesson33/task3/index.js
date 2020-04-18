@@ -9,10 +9,10 @@ function getTasksList(url) {
        })
   }
 
-getTasksList( 'GET', baseUrl)
-.then(tasksList => console.log(tasksList))
-.catch(error => console.log(error)
-)
+// // getTasksList( 'GET', baseUrl)
+// // .then(tasksList => console.log(tasksList))
+// // .catch(error => console.log(error)
+// )
   /* getTaskById code here */
 
 function getTaskById() {
@@ -22,7 +22,7 @@ function getTaskById() {
      })
 }
 
-getTasksList( 'GET', baseUrl)
-.then(tasksList => console.log(tasksList))
-.catch(error => console.log(error)
-)
+// getTasksList( 'GET', baseUrl)
+// .then(tasksList => console.log(tasksList))
+// .catch(error => console.log(error)
+// )
