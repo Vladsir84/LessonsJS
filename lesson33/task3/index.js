@@ -2,27 +2,27 @@ const baseUrl = 'https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/tasks';
 
 /* getTasksList code here */
 
-function getTasksList(url) {
+export function getTasksList(url) {
     return fetch(url)
        .then( response => {
           return response.json()
        })
   }
 
-// // getTasksList( 'GET', baseUrl)
-// // .then(tasksList => console.log(tasksList))
-// // .catch(error => console.log(error)
-// )
+getTasksList( 'GET', baseUrl)
+.then(tasksList => console.log(tasksList))
+.catch(error => console.log(error)
+)
   /* getTaskById code here */
 
-function getTaskById() {
+export function getTaskById() {
     return fetch('2')
        .then(response => {
         return response.json()
      })
 }
 
-// getTasksList( 'GET', baseUrl)
-// .then(tasksList => console.log(tasksList))
-// .catch(error => console.log(error)
-// )
+getTasksList( 'GET', baseUrl)
+.then(tasksList => console.log(tasksList))
+.catch(error => console.log(error)
+)
