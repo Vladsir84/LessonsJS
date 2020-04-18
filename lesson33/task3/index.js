@@ -9,10 +9,10 @@ export function getTasksList(url) {
        })
   }
 
-getTasksList( 'GET', baseUrl)
-.then(tasksList => console.log(tasksList))
-.catch(error => console.log(error)
-)
+// getTasksList( 'GET', baseUrl)
+// .then(tasksList => console.log(tasksList))
+// .catch(error => console.log(error)
+// )
   /* getTaskById code here */
 
 export function getTaskById() {
@@ -22,7 +22,7 @@ export function getTaskById() {
      })
 }
 
-getTasksList( 'GET', baseUrl)
-.then(tasksList => console.log(tasksList))
-.catch(error => console.log(error)
-)
+// getTasksList( 'GET', baseUrl)
+// .then(tasksList => console.log(tasksList))
+// .catch(error => console.log(error)
+// )
