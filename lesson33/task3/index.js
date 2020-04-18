@@ -9,20 +9,12 @@ export function getTasksList() {
        })
   }
 
-// getTasksList( 'GET', baseUrl)
-// .then(tasksList => console.log(tasksList))
-// .catch(error => console.log(error)
-// )
   /* getTaskById code here */
 
-export function getTaskById(id) {
-    return fetch(`${baseUrl}/${id}`)
+export function getTaskById(taskId) {
+    return fetch(`${baseUrl}/${taskId}`)
        .then(response => {
         return response.json()
      })
 }
 
-// getTasksList( 'GET', baseUrl)
-// .then(tasksList => console.log(tasksList))
-// .catch(error => console.log(error)
-// )
