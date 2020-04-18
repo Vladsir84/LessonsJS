@@ -15,7 +15,14 @@ getTasksList( 'GET', baseUrl)
 )
   /* getTaskById code here */
 
-// function getTaskById() {
-//     return fetch('https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/tasks')
-//        .then(tasksData => console.log(tasksData));
-//   }
+function getTaskById() {
+    return fetch('2')
+       .then(response => {
+        return response.json()
+     })
+}
+
+getTasksList( 'GET', baseUrl)
+.then(tasksList => console.log(tasksList))
+.catch(error => console.log(error)
+)
