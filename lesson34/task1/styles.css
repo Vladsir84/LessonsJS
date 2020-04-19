@@ -46,6 +46,7 @@ body {
     opacity: 0.7;
 }
 
+
 .list__item-child {
     margin-bottom: 0;
 }
@@ -76,7 +77,7 @@ body {
     flex: 1;
 }
 
-.delete-btn {
+.list__item-delete-btn {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -94,6 +95,6 @@ body {
     opacity: 0.7;
 }
 
-.delete-btn::before {
+.list__item-delete-btn::before {
     content: '+';
 }
