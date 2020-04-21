@@ -1,24 +1,24 @@
-const baseUrl = 'https://5e6b89f2d708a000160b4a7d.mockapi.io/api/v1/tasks';
+const baseUrl = 'https://5e5af5eb37d2eh0016796f52.mockapi.io/api/v1/users';
 
 
 /* getUsersList code here */
 
-export const getUsersList = userData => {
+
+export const getUsersList = () => {
     return fetch(baseUrl)
-    .then(response => response.json())
-}
+       .then(response => {
+          return response.json()
+       })
+  }
 
 /* getUserById code here */
 
 export const getUserById = userId => {
-    return fetch(baseUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(userId)
-    })
- };
+    return fetch(`${baseUrl}/${userId}`)
+       .then(response => {
+        return response.json()
+     })
+}
 
 
 /* createUser code here */
