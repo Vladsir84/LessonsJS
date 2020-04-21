@@ -11,8 +11,10 @@ const defaultUser = {
 
 renderUserData(defaultUser);
 
+
 const showUserBtnElem = document.querySelector('.name-form__btn');
 const userNameInputElem = document.querySelector('.name-form__input');
+
 
 const onSearchUser = () => {
     showSpinner();
@@ -20,7 +22,7 @@ const onSearchUser = () => {
     const userName = userNameInputElem.value;
     fetchUserData(userName)
         .then(userData => {
-            renderUserData(userData)
+            renderUserData(userData);
             return userData.repos_url;
         })
         .then(url => fetchRepositories(url))
@@ -28,7 +30,7 @@ const onSearchUser = () => {
             renderRepos(reposList);
         })
         .catch(err => {
-            alert('Failed to load data')
+            alert('Failed to load data');
         })
         .finally(() => {
             hideSpinner();
