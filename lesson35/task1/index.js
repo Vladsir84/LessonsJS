@@ -1,14 +1,14 @@
-window.addEventListener("error", function onUnhandledError(err) {
+window.addEventListener("error", function onUnhandledError (err) {
     console.error("error", err.message);
 });
 
 let userParsingResult;
 
 try {
-    const user = JSON.parse('{"name":"Tom"}');
+    const user = JSON.parse('{"name": "Tom"}');
     console.log("User data: ", user);
     userParsingResult = "success";
-} catch (e) {
+} catch(e) {
     userParsingResult = "error";
 } finally {
     console.log(`User parsing finished with ${userParsingResult}`);
@@ -17,10 +17,10 @@ try {
 let productParsingResult;
 
 try {
-    const product = JSON.parse('{"name":"Milk" ');
+    const product = JSON.parse('{"product": "Meat"');
     console.log("Product data: ", product);
     productParsingResult = "success";
-} catch (e) {
+} catch(e) {
     productParsingResult = "error";
 } finally {
     console.log(`Product parsing finished with ${productParsingResult}`);
