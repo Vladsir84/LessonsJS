@@ -4,7 +4,7 @@ const submitBtnElem = document.querySelector('.submit-button');
 const errorElem = document.querySelector('.error-text');
 
 
-const baseUrl = 'https://crudcrud.com/api/5070c298241c41089c8031bddf237ead/users';
+const baseUrl = 'https://5e5af5eb37d2eh0016796f52.mockapi.io/api/v1/users';
 const formElem = document.querySelector('.login-form');
 
 const onInputChange = () => {
