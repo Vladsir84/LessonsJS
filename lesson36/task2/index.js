@@ -16,12 +16,12 @@ const showUserBtnElem = document.querySelector('.name-form__btn');
 const userNameInputElem = document.querySelector('.name-form__input');
 
 
-const onSearchUser = async() => {
+const onSearchUser = async () => {
     showSpinner();
     cleanReposList();
     const userName = userNameInputElem.value;
     try {
-        const userData = await fetchUserData(userName);
+        const userData  = await fetchUserData(userName);
         renderUserData(userData);
         const reposList = await fetchRepositories(userData.repos_url);
         renderRepos(reposList);
@@ -30,8 +30,8 @@ const onSearchUser = async() => {
     } finally {
         hideSpinner();
     }
-
-
+    
+    
     // fetchUserData(userName)
     //     .then(userData => {
     //         renderUserData(userData);
