@@ -1,7 +1,7 @@
 const fetchUser = async userId => fetch(`https://api.github.com/users/${userId}`)
     .then(response => response.json());
 
-export const getUsersBlogs = async usersArray => {
+const getUsersBlogs = async usersArray => {
     let usersData = usersArray
         .map(elem => fetchUser(elem));
     let userEmail = await Promise.all(usersData)

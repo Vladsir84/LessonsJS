@@ -9,15 +9,16 @@ export default () => {
     }
 
     function setMessage(text) {
-        message = text; 
+        message = text;
     }
 
     function setSender(newSender) {
-        sender = newSender; 
+        sender = newSender;
 
-    return {
-        sendMessage,
-        setMessage,
-        setSender,
+        return {
+            sendMessage,
+            setMessage,
+            setSender,
+        }
     }
 }
